@@ -1,2 +1,2 @@
-# Programaci-n-Reactiva
+# Programación Reactiva
 Repositorio donde se almacenan las actividades correspondientes al curso de Programación Reactiva 2022 I
