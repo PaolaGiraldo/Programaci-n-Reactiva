@@ -1,4 +1,4 @@
-package com.bancolombia;
+package com.company;
 
 public class Main {
 
