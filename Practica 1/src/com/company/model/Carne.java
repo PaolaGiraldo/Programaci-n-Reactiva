@@ -4,10 +4,10 @@ public class Carne {
 
     private String nombre;
     private int precio;
-    private String maduracion;
+    private int maduracion;
     private int pesoEnGramos;
 
-    public Carne(String nombre, int precio, String maduracion, int pesoEnGramos) {
+    public Carne(String nombre, int precio, int maduracion, int pesoEnGramos) {
         this.nombre = nombre;
         this.precio = precio;
         this.maduracion = maduracion;
@@ -30,11 +30,11 @@ public class Carne {
         this.precio = precio;
     }
 
-    public String getMaduracion() {
+    public int getMaduracion() {
         return maduracion;
     }
 
-    public void setMaduracion(String maduracion) {
+    public void setMaduracion(int maduracion) {
         this.maduracion = maduracion;
     }
 

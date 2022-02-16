@@ -7,9 +7,9 @@ public class Vegetal {
     private int peso;
     private String presentacion;
     private String sueloDeCultivo;
-    private String alturaDeCultivo;
+    private int alturaDeCultivo;
 
-    public Vegetal(String nombre, int precio, int peso, String presentacion, String sueloDeCultivo, String alturaDeCultivo) {
+    public Vegetal(String nombre, int precio, int peso, String presentacion, String sueloDeCultivo, int alturaDeCultivo) {
         this.nombre = nombre;
         this.precio = precio;
         this.peso = peso;
@@ -58,11 +58,11 @@ public class Vegetal {
         this.sueloDeCultivo = sueloDeCultivo;
     }
 
-    public String getAlturaDeCultivo() {
+    public int getAlturaDeCultivo() {
         return alturaDeCultivo;
     }
 
-    public void setAlturaDeCultivo(String alturaDeCultivo) {
+    public void setAlturaDeCultivo(int alturaDeCultivo) {
         this.alturaDeCultivo = alturaDeCultivo;
     }
 
