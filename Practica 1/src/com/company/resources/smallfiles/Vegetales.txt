@@ -1,0 +1,2 @@
+"Espinaca",3600,1000,"Bolsa","Calizo",3100
+"Brocoli",4000,4000,"Bolsa","Arcilloso",1500

@@ -13,4 +13,3 @@
 "Cebolla",3000,300,"Bolsa","Limoso",2000
 "Brocoli",2500,8600,"Bolsa","Arenoso",2000
 "Zanahoria",4000,1000,"Bolsa","Calizo",2000
-

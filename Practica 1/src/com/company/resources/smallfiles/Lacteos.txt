@@ -1,0 +1,2 @@
+"Leche",2000,"Bolsa",4000
+"Yogurt",3000,"Bolsa",3000
