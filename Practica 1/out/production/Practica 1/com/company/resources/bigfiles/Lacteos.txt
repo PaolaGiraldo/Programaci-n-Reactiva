@@ -1,0 +1,15 @@
+"Leche",2000,"Bolsa",4000
+"Yogurt",3000,"Bolsa",3000
+"Leche",2000,"Vaso",5000
+"Kumis",3000,"Bolsa",3200
+"Kumis",2300,"Vaso",3500
+"Queso",2500,"Bolsa",6000
+"Leche",4000,"Bolsa",4500
+"Yogurt",2000,"Bolsa",3200
+"Kumis",4000,"Vaso",5600
+"Leche",7000,"Vaso",400
+"Queso",2000,"Barra",3000
+"Yogurt",8000,"Bolsa",5300
+"Leche",2000,"Bolsa",600
+"Yogurt",3000,"Bolsa",5300
+"Kumis",4500,"Bolsa",4000

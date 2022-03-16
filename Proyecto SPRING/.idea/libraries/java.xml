@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/App-Spring-Reactivo/src/main/java" />
+      <root url="file://$PROJECT_DIR$/App-Spring-Reactivo/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
