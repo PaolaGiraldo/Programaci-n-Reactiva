@@ -5,36 +5,39 @@ import com.reactivo.app.modelos.Lacteo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Component
 
-public class CasoDeUsoLacteo {
+public class CasoDeUsoLacteo{
 
-    private LacteoRespository lacteoRespository;
+    @Autowired
+    LacteoRespository repository;
 
-    public Mono<Lacteo> getLacteoById(@PathVariable String id){
-
-        Lacteo lacteoPrueba = new Lacteo("LC-01","Leche",500,"Bolsa",5000);
-        Lacteo lacteoPrueba2 = new Lacteo("LC-02","Leche",500,"Bolsa",5000);
-
-        return Mono.just(lacteoPrueba);
-
+    public Mono<Lacteo> getLacteoById(String serial){
+        return repository.findLacteoBySerial(serial);
     }
-
 
     public Flux<Lacteo> getLacteos(){
-        Lacteo lacteoPrueba = new Lacteo("LC-01","Leche",500,"Bolsa",5000);
-        Lacteo lacteoPrueba2 = new Lacteo("LC-02","Leche",500,"Bolsa",5000);
-        Mono<Lacteo> lacteo1 = Mono.just(lacteoPrueba);
-        Mono<Lacteo> lacteo2 = Mono.just(lacteoPrueba2);
-
-        return Flux.merge(lacteo1,lacteo2);
+        return repository.findAll();
     }
+
+    public Mono<Lacteo> newLacteo(Lacteo lacteo){
+        return repository.save(lacteo);
+    }
+
+    public Mono<Lacteo> deleteLacteo(String id){
+        return repository.deleteLacteoBySerial(id);
+    }
+
+
+
 
 
 

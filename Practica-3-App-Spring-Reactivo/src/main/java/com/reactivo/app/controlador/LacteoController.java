@@ -2,35 +2,54 @@ package com.reactivo.app.controlador;
 
 
 import com.reactivo.app.casodeuso.CasoDeUsoLacteo;
-import com.reactivo.app.data.LacteoRespository;
 import com.reactivo.app.modelos.Lacteo;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 
-//TODO: Agregar logica para soportar casos de uso y usar bases de datos
 @RestController
-@RequestMapping("/lacteo")
+@RequestMapping("/lacteos")
 @AllArgsConstructor
+@NoArgsConstructor
 
 public class LacteoController {
 
-
-    private final CasoDeUsoLacteo casoDeUsoLacteo;
+    @Autowired
+    CasoDeUsoLacteo casoDeUsoLacteo;
 
     @GetMapping("/{id}")
-    public Mono<Lacteo> getLacteoById(@PathVariable String id){
+    public Mono<Lacteo> getLacteoBySerial(@PathVariable String id){
         return casoDeUsoLacteo.getLacteoById(id);
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public Flux<Lacteo> getLacteos(){
         return casoDeUsoLacteo.getLacteos();
     }
+
+    @PostMapping("/crear")
+    public ResponseEntity<Lacteo> createLacteo(@RequestBody Lacteo lacteo){
+        Mono<Lacteo> newLacteo = casoDeUsoLacteo.newLacteo(lacteo);
+        return new ResponseEntity(newLacteo, HttpStatus.CREATED);
+    }
+
+
+    @DeleteMapping("/eliminar/{id}")
+    public ResponseEntity<Lacteo> deleteLacteo(@PathVariable String id){
+        return new ResponseEntity(casoDeUsoLacteo.deleteLacteo(id), HttpStatus.NOT_FOUND);
+    }
+
+    @PutMapping("/actualizar/{id}")
+    public Mono<Lacteo> updateLacteo(@RequestBody Lacteo newLacteo, @PathVariable String id){
+        return casoDeUsoLacteo.newLacteo(newLacteo);
+    }
+
+
 
 }
