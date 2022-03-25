@@ -18,17 +18,13 @@ class CasoDeUsoConfigTest{
 
     @Test
     public void whenRegexFilterIsUsed_thenComponentScanShouldRegisterBeanMatchingRegex() {
-        System.out.println("TEST");
+
         ApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(CasoDeUsoConfig.class);
         List<String> beans = Arrays.stream(applicationContext.getBeanDefinitionNames())
                 .filter(bean -> !bean.contains("org.springframework")
                         && !bean.contains("CasoDeUsoConfig"))
                 .collect(Collectors.toList());
-
-
-
-        System.out.println(beans);
 
     }
 
