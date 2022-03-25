@@ -32,7 +32,7 @@ public class CasoDeUsoVegetal {
         return repository.save(vegetal);
     }
 
-    public Mono<Vegetal> deleteVegetal(String id){
+    public Mono<Vegetal> deleteVegetalById(String id){
         return repository.deleteVegetalBySerial(id);
     }
 

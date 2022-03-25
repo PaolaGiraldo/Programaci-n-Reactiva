@@ -40,7 +40,7 @@ public class VegetalController {
 
     @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<Vegetal> deleteVegetal(@PathVariable String id){
-        return new ResponseEntity(casoDeUsoVegetal.deleteVegetal(id), HttpStatus.NOT_FOUND);
+        return new ResponseEntity(casoDeUsoVegetal.deleteVegetalById(id), HttpStatus.NOT_FOUND);
     }
 
     @PutMapping("/actualizar/{id}")

@@ -24,7 +24,7 @@ public class CarneController {
 
     @GetMapping("/{id}")
     public Mono<Carne> getCarneBySerial(@PathVariable String id){
-        return casoDeUsoCarne.getLacteoById(id);
+        return casoDeUsoCarne.getCarneById(id);
     }
 
     @GetMapping("")
@@ -40,8 +40,8 @@ public class CarneController {
 
 
     @DeleteMapping("/eliminar/{id}")
-    public ResponseEntity<Carne> deleteLacteo(@PathVariable String id){
-        return new ResponseEntity(casoDeUsoCarne.deleteCarne(id), HttpStatus.NOT_FOUND);
+    public ResponseEntity<Carne> deleteCarneById(@PathVariable String id){
+        return new ResponseEntity(casoDeUsoCarne.deleteCarneById(id), HttpStatus.NOT_FOUND);
     }
 
     @PutMapping("/actualizar/{id}")

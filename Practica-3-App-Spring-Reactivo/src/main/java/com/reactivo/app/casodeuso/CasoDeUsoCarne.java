@@ -20,7 +20,7 @@ public class CasoDeUsoCarne{
     @Autowired
     CarneRepository repository;
 
-    public Mono<Carne> getLacteoById(String serial){
+    public Mono<Carne> getCarneById(String serial){
         return repository.findCarneBySerial(serial);
     }
 
@@ -32,7 +32,7 @@ public class CasoDeUsoCarne{
         return repository.save(carne);
     }
 
-    public Mono<Carne> deleteCarne(String id){
+    public Mono<Carne> deleteCarneById(String id){
         return repository.deleteCarneBySerial(id);
     }
 
