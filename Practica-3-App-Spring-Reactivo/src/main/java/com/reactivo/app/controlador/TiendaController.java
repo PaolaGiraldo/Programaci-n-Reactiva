@@ -39,7 +39,7 @@ public class TiendaController {
         return casodeUsoTienda.getTiendas().get(idTienda -1);
     }
 
-    @GetMapping("/crear")
+    @PostMapping("/crear")
         public List<Tienda> crearTiendas(){
             return casodeUsoTienda.crearTiendas();
     }

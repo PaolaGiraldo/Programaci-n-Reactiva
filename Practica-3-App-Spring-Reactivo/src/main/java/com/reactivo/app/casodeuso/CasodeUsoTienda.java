@@ -59,8 +59,6 @@ public class CasodeUsoTienda {
     List<Tienda> tiendas = new ArrayList<>();
 
 
-
-
     public List<Tienda> crearTiendas(){
         if(tiendas.isEmpty()){
         Tienda tienda1 = new Tienda("T1",listaLacteosT1,listaVegetalesT1,listaCarnesT1,0,"Mario");
