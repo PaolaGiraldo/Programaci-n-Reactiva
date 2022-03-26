@@ -11,11 +11,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 public class Practica3AppSpringReactivoApplication {
 
-
-
 	public static void main(String[] args) {
 		SpringApplication.run(Practica3AppSpringReactivoApplication.class, args);
-
 	}
 
 }

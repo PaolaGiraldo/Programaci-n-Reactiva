@@ -39,10 +39,9 @@ public class LacteoController {
         return new ResponseEntity(newLacteo, HttpStatus.CREATED);
     }
 
-
     @DeleteMapping("/eliminar/{id}")
-    public ResponseEntity<Lacteo> deleteLacteo(@PathVariable String id){
-        return new ResponseEntity(casoDeUsoLacteo.deleteLacteo(id), HttpStatus.NOT_FOUND);
+    public ResponseEntity<Lacteo> deleteLacteoById(@PathVariable String id){
+        return new ResponseEntity(casoDeUsoLacteo.deleteLacteoById(id), HttpStatus.NOT_FOUND);
     }
 
     @PutMapping("/actualizar/{id}")

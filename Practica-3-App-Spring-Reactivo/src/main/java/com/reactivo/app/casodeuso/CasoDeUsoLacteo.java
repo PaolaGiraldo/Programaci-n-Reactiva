@@ -32,7 +32,7 @@ public class CasoDeUsoLacteo{
         return repository.save(lacteo);
     }
 
-    public Mono<Lacteo> deleteLacteo(String id){
+    public Mono<Lacteo> deleteLacteoById(String id){
         return repository.deleteLacteoBySerial(id);
     }
 
