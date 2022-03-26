@@ -54,7 +54,7 @@ class CasoDeUsoLacteoTest {
 
     @Test
     public void givenLacteo_whenDeleteLacteo_thenReturnMonoLacteo() {
-        Mockito.when(casoDeUsoLacteo.deleteLacteo(any())).thenReturn(Mono.just(new Lacteo()));
+        Mockito.when(casoDeUsoLacteo.deleteLacteoById(any())).thenReturn(Mono.just(new Lacteo()));
 
     }
 
