@@ -35,8 +35,7 @@ public class TiendaController {
     }
 
     @GetMapping("/{idTienda}")
-    public Tienda consultarTiendaPorId(@PathVariable Integer idTienda){
-        return casodeUsoTienda.getTiendas().get(idTienda -1);
+    public Tienda consultarTiendaPorId(@PathVariable Integer idTienda){ return casodeUsoTienda.getTiendas().get(idTienda -1);
     }
 
     @PostMapping("/crear")
